@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+	
+	$("head").append("<meta name='viewport' content='initial-scale=1, maximum-scale=1'>");
 
 	$("header #hamburger").click(function(){
 		$("header").toggleClass("open");
