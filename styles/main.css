@@ -1,0 +1,55 @@
+/*Fonts*/
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:200);
+@import url(http://fonts.googleapis.com/css?family=Roboto);
+
+/*Styles*/
+
+body {
+	font-family: Roboto;
+	background-color: hsl(0, 0%, 97%);
+	margin: 0;
+}
+header, footer{
+	background-color: hsl(0, 0%, 78%);	
+}
+header{
+	top:0px;
+	width:100%;
+	position:relative;
+	box-sizing: border-box;
+	padding-top:2px;
+}
+#content{
+	min-height: 100%;
+	padding-bottom: 10px;
+}
+
+#logo {
+	font-family: Raleway, 200;
+	font-size:18pt;
+	border-bottom: 2px solid hsl(18, 74%, 35%);
+	text-decoration: none;
+	color:hsl(18, 80%, 41%);
+	margin-top:0px;
+	padding-left: 10px;
+}
+a{
+	text-decoration: none;
+}
+#cite{
+	color:#868484;
+	text-align: right;
+	margin-right: 10px;
+}
+#copyright{
+	color:#b4a4a4;
+	font-size: 12pt;
+	left:10px;
+	position: absolute;
+}
+footer{
+	position:absolute;
+	width:100%;
+	bottom:0px;
+}
