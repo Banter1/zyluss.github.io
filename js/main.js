@@ -15,5 +15,13 @@ $(document).ready(function(){
 			$("header").css("height","").removeClass("open");
 		}
 	});
+	
+	$("header #social #github").click(function(){
+		document.location = "//github.com/Zyluss";
+	});
+	$("header #social #twitter").click(function(){
+		document.location = "//twitter.com/Zyluss_";	
+	});
+	
 
 });
