@@ -10,46 +10,237 @@ body {
 	background-color: hsl(0, 0%, 97%);
 	margin: 0;
 }
-header, footer{
+header, footer {
 	background-color: hsl(0, 0%, 78%);	
 }
-header{
+header {
 	top:0px;
 	width:100%;
-	position:relative;
+	position: fixed;
 	box-sizing: border-box;
 	padding-top:2px;
+	height: 56px;
 }
-#content{
+#content {
+	padding-top: 56px;
 	min-height: 100%;
 	padding-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	box-sizing: border-box;
 }
 
-#logo {
+#header-wrap {
 	font-family: Raleway, 200;
-	font-size:18pt;
 	border-bottom: 2px solid hsl(18, 74%, 35%);
 	text-decoration: none;
 	color:hsl(18, 80%, 41%);
 	margin-top:0px;
+	padding: 11px 0;
 	padding-left: 10px;
+	height: 100%;
+	box-sizing: border-box;
+	max-width: 1400px;
 }
-a{
+
+#hamburger {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	margin: 4px;
+	position: absolute;
+	top: 0;
+	left: -48px;
+	transition: left .5s;
+	-webkit-transition: left .5s;
+	cursor: pointer;
+}
+#hamburger .hl {
+	position: absolute;
+	background: #fff;
+	height: 1px;
+	width: 32px;
+	left: 8px;
+}
+#hamburger #hl1 {
+	top: 17px;
+}
+#hamburger #hl2 {
+	top: 24px;
+}
+#hamburger #hl3 {
+	top: 31px;
+}
+#logo {
+	font-size: 22px;
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 10px;
+	transition: left .5s;
+	-webkit-transition: left .5s;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	height: 56px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+nav a {
+	height: 56px;
+	min-width: 10px;
+	padding: 20px 16px;
+	box-sizing: border-box;
+	display: inline-block;
+	color: #fff;
+	transition: background .5s, color .5s;
+	-webkit-transition: background .5s, color .5s;
+	position: relative;
+}
+nav a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: hsl(18, 74%, 35%);
+	z-index: -1;
+	transition: all .5s cubic-bezier(.2,.3,0,1);
+	-webkit-transition: all .5s cubic-bezier(.2,.3,0,1);
+}
+nav a:hover {
+	color:  hsl(0, 0%, 78%);
+}
+nav a:hover::before {
+	height: 100%;
+}
+
+#social {
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: inline-block;
+	animation: socialin 1s;
+	-webkit-animation: socialin 1s;
+}
+@keyframes socialin {
+	from { opacity: 0; }
+}
+@-webkit-keyframes socialin {
+	from { opacity: 0; }
+}
+#social .slink {
+	border-radius: 50%;
+	width: 28px;
+	height: 28px;
+	margin: 14px;
+	display: inline-block;
+	cursor: pointer;
+}
+#social .slink {
+	opacity: .2;
+	transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+}
+#social .slink:hover {
+	opacity: .4;
+}
+a {
 	text-decoration: none;
 }
-#cite{
+#cite {
 	color:#868484;
 	text-align: right;
 	margin-right: 10px;
 }
-#copyright{
+#copyright {
 	color:#b4a4a4;
 	font-size: 12pt;
 	left:10px;
 	position: absolute;
 }
-footer{
+footer {
 	position:absolute;
 	width:100%;
 	bottom:0px;
+	left: 0;
+}
+
+
+@media (max-width: 650px) {
+
+	header {
+		transition: all .5s cubic-bezier(.2, .3, 0, 1);
+		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
+	}
+
+	#hamburger {
+		left: 0;
+		transition: all .5s cubic-bezier(.2, .3, 0, 1);
+		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
+		z-index: 10;
+	}
+	#logo {
+		left: 56px;
+		transition: all .5s cubic-bezier(.2, .3, 0, 1);
+		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
+	}
+	#social {
+		transition: all .5s cubic-bezier(.2, .3, 0, 1);
+		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
+	}
+	nav {
+		left: -50%;
+		width: 100%;
+		transition: all .5s cubic-bezier(.2, .3, 0, 1);
+		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
+	}
+	nav a {
+		display: block;
+		text-align: center;
+	}
+	nav a::before {
+		display: none;
+	}
+	nav a:hover {
+		color: #fff;
+	}
+	nav a:active {
+		transition: all 0s;
+		-webkit-transition: all 0s;
+		background: #fff;
+		color: hsl(0, 0%, 78%);
+	}
+	header.open nav {
+		left: 50%;
+	}
+	header.open #logo {
+		left: 100%;
+	}
+	header.open #social {
+		right: -100%;
+	}
+	header.open #hamburger {
+		left: 100%;
+		margin-left: -56px;
+	}
+
+}
+@media (min-width: 1400px) {
+	#header-wrap {
+		position: absolute;
+		width: 1400px;
+		left: 50%;
+		height: 56px;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		top: 0;
+	}
+	#hamburger {
+		display: none;
+	}
 }
