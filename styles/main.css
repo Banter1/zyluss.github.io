@@ -20,6 +20,7 @@ header {
 	box-sizing: border-box;
 	padding-top:2px;
 	height: 56px;
+	z-index: 100;
 }
 #content {
 	padding-top: 56px;
@@ -28,6 +29,9 @@ header {
 	padding-left: 8px;
 	padding-right: 8px;
 	box-sizing: border-box;
+}
+#content.rel {
+	position: relative;
 }
 
 #header-wrap {

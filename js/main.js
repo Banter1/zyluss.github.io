@@ -24,6 +24,12 @@ $(document).ready(function(){
 	$("header #social #twitter").click(function(){
 		document.location = "//twitter.com/Zyluss_";	
 	});
+
+	$(window).load(function(){
+		if( $(window).height() < $("#content").height() ) {
+			$("#content").addClass("rel");
+		}
+	});
 	
 
 });
