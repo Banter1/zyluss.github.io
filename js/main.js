@@ -16,6 +16,11 @@ $(document).ready(function(){
 		if( $(window).width() > 650 ) {
 			$("header").css("height","").removeClass("open");
 		}
+		if( $(window).height() < $("#content").outerHeight() ) {
+			$("#content").addClass("rel");
+		} else {
+			$("#content").removeClass("rel");
+		}
 	});
 	
 	$("header #social #github").click(function(){
