@@ -46,6 +46,9 @@ header {
 	box-sizing: border-box;
 	max-width: 1400px;
 }
+#logo {
+	padding-left:0;
+}
 
 #hamburger {
 	display: inline-block;
@@ -189,7 +192,7 @@ footer {
 		z-index: 10;
 	}
 	#logo {
-		
+		left: 15px;
 		transition: all .5s cubic-bezier(.2, .3, 0, 1);
 		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
 	}
@@ -244,6 +247,11 @@ footer {
 		-webkit-transform: translateX(-50%);
 		top: 0;
 	}
+	
+	#logo {
+		left: 15px;
+	}
+	
 	#hamburger {
 		display: none;
 	}
