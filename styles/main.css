@@ -192,7 +192,7 @@ footer {
 		z-index: 10;
 	}
 	#logo {
-		left: 15px;
+		left: 56px;
 		transition: all .5s cubic-bezier(.2, .3, 0, 1);
 		-webkit-transition: all .5s cubic-bezier(.2, .3, 0, 1);
 	}
