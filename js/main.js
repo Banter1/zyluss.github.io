@@ -13,7 +13,7 @@ $(document).ready(function(){
 	});
 
 	$(window).resize(function(){
-		if( $(window).width() > 650 ) {
+		if( $(window).width() > 768 ) {
 			$("header").css("height","").removeClass("open");
 		}
 		if( $(window).height() < $("#content").outerHeight() ) {
