@@ -178,7 +178,7 @@ footer {
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
 
 	header {
 		transition: all .5s cubic-bezier(.2, .3, 0, 1);
